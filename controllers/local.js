@@ -12,6 +12,7 @@ exports.UploadLocal = async (req, res) => {
     if (!fs.existsSync(uploadDirectory)) {
       fs.mkdirSync(uploadDirectory, { recursive: false });
     }
+
     const filePath = path.join(uploadDirectory, fileName.filename);
 
     const writeStream = fs.createWriteStream(filePath);
